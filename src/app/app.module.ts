@@ -12,3 +12,9 @@ import { QuoteDetailComponent } from './quote-detail/quote-detail.component';
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }

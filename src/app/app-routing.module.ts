@@ -3,8 +3,20 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [];
 
+
+import { QuoteDetailComponent } from './quote-detail/quote-detail.component';
+
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  declarations: [
+    AppComponent,
+    QuoteComponent,
+    QuoteDetailComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
-export class AppRoutingModule { }
+export class AppModule { }
