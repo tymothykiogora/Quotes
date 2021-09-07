@@ -47,12 +47,18 @@ export class QuoteComponent implements OnInit {
   goals: any;
 
 
-    
-          
-            
-    
-
-          
+  //add new quote
+  addNewQuote(quote:any) {
+    this.quotes.push(
+      new Quote(
+        quote.id,
+        quote.author,
+        quote.createdBy,
+        quote.statement,
+        new Date()
+      )
+    );
+  }
     
     
   
