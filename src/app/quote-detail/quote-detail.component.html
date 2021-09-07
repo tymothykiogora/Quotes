@@ -1,17 +1,20 @@
-<<div class="container-fluid">
+<p>Author: ~ {{quote.author}}</p>
+<p>Created By: {{quote.createdBy}}</p>
+<div class="container-fluid">
     <div class="row">
         <div class="col-md-4">
             <a (click)="upVoteQuote(quote)"><i class="fa fa-thumbs-up" title="like"></i>{{quote.likes}}</a>
         </div>
-
+    
         <div class="col-md-4">
             <a (click)="downVoteQuote(quote)"><i class="fa fa-thumbs-down" title="dislike"></i>{{quote.dislikes}}</a>
         </div>
-
+    
         <div class="col-md-4">
-            <a (click)="deleteQuote(quote)"><i class="fa fa-trash" title="delete"></i></a>
+            <a (click)="deleteQuote(quote)"><i class="fa fa-trash" title="delete" id="delete"></i></a>
         </div>
-
-        <a (click)="deleteQuote(quote)"><i class="fa fa-trash" title="delete" id="delete"></i></a>
     </div>
-</div> 	</div> 
+    <div>
+        <span title="Days passed"><small>{{quote.createdAt|dayCount}} days ago</small></span>
+    </div>
+</div>
